@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI Biz Navigator · Vercel + Supabase</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>MBTI Biz Navigator</h1>
+    <p>Vercel Serverless + Supabase 기반 사업가 성향 분석 플랫폼</p>
+    <span class="badge">Freemium MVP (Cloud Ready)</span>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>1) 분석 입력</h2>
+      <form id="analysisForm">
+        <label for="mbti">MBTI</label>
+        <input id="mbti" name="mbti" type="text" maxlength="4" placeholder="예: ENTJ" required />
+
+        <label for="industry">관심 업종</label>
+        <input id="industry" name="industry" type="text" placeholder="예: 교육 SaaS" required />
+
+        <label for="goal">6개월 목표</label>
+        <input id="goal" name="goal" type="text" placeholder="예: 월 매출 3천만 원" required />
+
+        <button type="submit" id="submitBtn">무료 분석 시작</button>
+      </form>
+      <p class="help">무료: 사업 방향 요약. 유료: 마케팅/조직/자동화 심층 보고서.</p>
+    </section>
+
+    <section class="panel" id="freeSection">
+      <h2>2) 무료 결과</h2>
+      <div id="freeResult" class="result">입력 후 무료 분석 결과가 표시됩니다.</div>
+      <div id="chartArea" class="bars"></div>
+    </section>
+
+    <section class="panel premium">
+      <h2>3) 유료 결과 미리보기</h2>
+      <div id="premiumPreview" class="result">유료 보고서 미리보기가 표시됩니다.</div>
+      <div class="paywall">
+        <p><strong>무료 공개:</strong> 1,000자</p>
+        <p><strong>유료 공개:</strong> 마케팅·직원관리·자동화·리스크 대응 전체 보고서</p>
+        <button id="unlockBtn" type="button">유료 플랜 보기</button>
+      </div>
+      <small id="saveInfo" class="muted"></small>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2026 MBTI Biz Navigator · Deploy on Vercel, Data on Supabase</small>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
