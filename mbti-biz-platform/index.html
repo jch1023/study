@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI Biz Navigator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>MBTI Biz Navigator</h1>
+    <p>사업가 성향 분석 · 사업 방향 추천 · 마케팅/조직 운영 전략 보고서</p>
+    <span class="badge">Freemium MVP</span>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>1) MBTI 입력</h2>
+      <form id="analysisForm">
+        <label for="mbti">MBTI</label>
+        <input id="mbti" name="mbti" type="text" maxlength="4" placeholder="예: ENTJ" required />
+
+        <label for="industry">관심 업종</label>
+        <input id="industry" name="industry" type="text" placeholder="예: 교육, 헬스케어, F&B" required />
+
+        <label for="goal">6개월 목표</label>
+        <input id="goal" name="goal" type="text" placeholder="예: 월 매출 3천만 원" required />
+
+        <button type="submit">무료 분석 시작</button>
+      </form>
+      <p class="help">무료: 사업 방향 핵심 요약 + 기본 시각화. 유료: 마케팅/직원관리/심층 보고서.</p>
+    </section>
+
+    <section class="panel" id="freeSection">
+      <h2>2) 무료 결과 (사업 방향)</h2>
+      <div id="freeResult" class="result">MBTI를 입력하면 무료 사업 방향 제안을 보여줍니다.</div>
+      <div id="chartArea" class="bars"></div>
+    </section>
+
+    <section class="panel premium">
+      <h2>3) 유료 결과 미리보기 (잠금)</h2>
+      <div id="premiumPreview" class="result"></div>
+      <div class="paywall">
+        <p><strong>무료 공개:</strong> 1,000자까지</p>
+        <p><strong>유료 전환:</strong> 마케팅 플랜, 채용/조직 운영, 자동화 워크플로우, 심층 보고서 PDF</p>
+        <button id="unlockBtn" type="button">유료 플랜 보기</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>4) 서비스 구조 (MVP → 확장)</h2>
+      <ol>
+        <li>MBTI 기반 프로파일링 데이터셋 구축</li>
+        <li>AI 분석 엔진 + 리포트 템플릿 결합</li>
+        <li>무료 트래픽 유입 (요약 리포트, 공유 링크)</li>
+        <li>유료 전환 (심층 분석, 팀 운영, 자동화 추천)</li>
+        <li>자동화 도구 연동 (CRM, 광고, 노션, 이메일)</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2026 MBTI Biz Navigator MVP</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
