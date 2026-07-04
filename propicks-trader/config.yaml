@@ -1,0 +1,18 @@
+# ProPicks 트레이더 기본 설정
+# 실행 시 CLI 옵션이 이 파일보다 우선합니다.
+
+# true 면 주문 계획표만 출력하고 실제 주문은 하지 않음 (안전 기본값)
+dry_run: true
+
+# 주문 유형: market(시장가) | limit(현재가 기준 지정가)
+order_type: market
+
+# 총 투자 예산 상한 (USD). 실행 시 --budget 이 이 값을 넘으면 거부.
+max_budget_usd: 50000
+
+# 매수 시 수수료/슬리피지 여유분 (현금 검증에 사용, 0.98 = 2% 여유)
+cash_safety_factor: 0.98
+
+# 체결 대기 폴링 간격(초)과 최대 대기 시간(초)
+fill_poll_interval: 3
+fill_poll_timeout: 300
